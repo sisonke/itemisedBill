@@ -10,13 +10,32 @@ describe('return all the service provider information inside an object', functio
   });
 });
 
-
-
-//
+//For MTN phone calls only
 describe('phone calls for the specified provider',function() {
   it('should return the specific service provider',function() {
-  var specifiedProviderFunction = require('../specifedprovider');
-  console.log(specifiedProviderFunction);
-  assert.equal(specifiedProviderFunction.specifiedProvider("MTN").length, 16);
+    var itemisedFunction = require('../itemisedB');
+ var specifiedProvider = itemisedFunction.bills();
+  // console.log(specifiedProvider);
+  assert.equal(itemisedFunction.specifiedProvider(specifiedProvider, 'MTN').length, 16);
+    });
+});
+
+//For Vodacom phone calls only
+describe('phone calls for the specified provider',function() {
+  it('should return the specific service provider',function() {
+    var itemisedFunction = require('../itemisedB');
+ var specifiedProvider = itemisedFunction.bills();
+  // console.log(specifiedProvider);
+  assert.equal(itemisedFunction.specifiedProvider(specifiedProvider, 'Vodacom').length, 8);
+    });
+});
+
+//For Cell C phone calls only
+describe('phone calls for the specified provider',function() {
+  it('should return the specific service provider',function() {
+    var itemisedFunction = require('../itemisedB');
+ var specifiedProvider = itemisedFunction.bills();
+  // console.log(specifiedProvider);
+  assert.equal(itemisedFunction.specifiedProvider(specifiedProvider, 'CellC').length, 11);
     });
 });
