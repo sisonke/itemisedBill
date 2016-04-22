@@ -25,17 +25,31 @@ module.exports.bills = bills;
 
 
 var specifiedProvider = function(bills, provider) {
-  // console.log(provider);
   var specificProvider = [];
-
   for (var i in bills) {
     var value = bills[i];
     if (value.Provider === provider) {
       specificProvider.push(value);
     }
   }
-  console.log(specificProvider);
+  //console.log(specificProvider);
   return specificProvider;
 };
 
 module.exports.specifiedProvider = specifiedProvider;
+
+var totalCalls = function (bills,number) {
+  console.log(number);
+  var Callsmade = [];
+  for (var n in bills) {
+    var value = bills[n];
+   if(value.Number === number) {
+    Callsmade.push(value);
+    console.log(Callsmade);
+  }
+}
+console.log(Callsmade);
+//return Callsmade;
+}
+//Callsmade("MTN");
+ module.exports.totalCalls = totalCalls;
