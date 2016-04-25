@@ -35,21 +35,21 @@ var specifiedProvider = function(bills, provider) {
   //console.log(specificProvider);
   return specificProvider;
 };
-
+//grouping the service providers with their names and number phones
 module.exports.specifiedProvider = specifiedProvider;
 
 var totalCalls = function (bills,number) {
-  console.log(number);
+  //console.log(number);
   var Callsmade = [];
   for (var n in bills) {
     var value = bills[n];
    if(value.Number === number) {
     Callsmade.push(value);
-    console.log(Callsmade);
+  //  console.log(Callsmade);
   }
 }
 console.log(Callsmade);
-//return Callsmade;
+return Callsmade;
 }
 //Callsmade("MTN");
  module.exports.totalCalls = totalCalls;

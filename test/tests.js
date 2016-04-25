@@ -44,6 +44,7 @@ describe('the total number of calls made to numbers for each cell phone provider
   it('should return total number of calls made to numbers for each cell phone provider ', function() {
     var itemisedFunction = require('../itemisedB');
     var totalCalls = itemisedFunction.bills();
-    assert.equal(itemisedFunction.totalCalls(totalCalls, 'CellC').length, 5);
+  //  console.log(totalCalls);
+    assert.equal(itemisedFunction.totalCalls(totalCalls, '0832401145').length,5);
   });
 });
